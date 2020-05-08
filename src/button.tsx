@@ -1,7 +1,5 @@
 import React from 'react'
 
-import classNames from 'classnames'
-
 const Button = () => {
     return (
         <div>
@@ -9,7 +7,6 @@ const Button = () => {
         </div>
     )
 }
-
 
 export default Button
 
