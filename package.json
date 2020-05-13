@@ -1,7 +1,11 @@
 {
-  "name": "rui",
+  "name": "mor-ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author": "congrui",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "@babel/core": "7.9.0",
     "@svgr/webpack": "4.3.3",
@@ -77,7 +81,10 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "build-ts": "tsc -p tsconfig.build.json",
+    "clean:dist": "rimraf ./dist",
+    "clean:umd": "rimraf ./umd",
+    "build:ts": "npm run clean:dist && tsc -p tsconfig.build.json && grunt",
+    "build:umd": "npm run clean:umd && webpack --config ./scripts/build.umd.js && grunt",
     "storybook": "start-storybook -p 6006 -c .storybook",
     "build-storybook": "build-storybook"
   },
@@ -86,7 +93,7 @@
   },
   "browserslist": {
     "production": [
-     "last 2 versions"
+      "last 2 versions"
     ],
     "development": [
       "last 1 chrome version",
@@ -144,16 +151,13 @@
       "jest-watch-typeahead/testname"
     ]
   },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
-  },
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/react": "^5.3.18",
-    "react-docgen-typescript-loader": "^3.7.2"
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "uglifyjs-webpack-plugin": "^2.2.0"
   }
 }
