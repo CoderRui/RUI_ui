@@ -10,7 +10,11 @@ export interface FcButtonType {
     className?: string,
     // 设置 Button 类型
     type?: ButtonType,
-    href?: string
+    href?: string,
+    size?: SizeType
+    ghost?:  boolean,
+    block?: boolean,
+    disabled?: Boolean,
     children?: React.ReactNode
 }
 
@@ -27,20 +31,44 @@ const Button: FC<ButtonTypes> = (props) => {
                 const {
                     className,
                     type,
+                    ghost,
+                    block,
+                    children,
+                    disabled,
+                    size: customizeSize,
                     ...restProps
                 } = props
 
+                let SizeType = ''
+                switch ( customizeSize || size ) {
+                    case 'large':
+                        SizeType = 'lg';
+                        break;
+                    case 'small':
+                        SizeType = 'sm';
+                        break
+                    default:
+                        break
+                }
+
                 const classes = classNames(className, {
-                    
+                    [`mor-${type}`]: type,
+                    [`mor-${SizeType}`]: SizeType,
+                    ['mor-ghost']: ghost,
+                    ['mor-block']: block,
+                    ['mor-disabled']: disabled
                 })
 
+                
                 if (type === 'link' && props.href) {
-                    <a href=""></a>
+                    <a {...restProps} className={classes}>
+                        {children}
+                    </a>
                 }
 
                 return (
-                    <button>
-                        
+                    <button {...restProps} className={classes}>
+                        { children }
                     </button>
                 )
               }
