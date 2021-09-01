@@ -1,4 +1,3 @@
 module.exports = {
-    extends: [
-    ]
-}
+    extends: [require.resolve('mor-lint/type/react-lint')]
+};
