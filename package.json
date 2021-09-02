@@ -1,6 +1,6 @@
 {
     "name": "mor-ui",
-    "version": "0.1.1",
+    "version": "1.0.0",
     "description": "Mor-ui 组件包",
     "dependencies": {
         "@babel/core": "7.12.3",
@@ -82,12 +82,17 @@
         "start": "node scripts/start.js",
         "build": "node scripts/build.js",
         "test": "node scripts/test.js",
-        "commit" : "git-cz",
+        "commit": "git-cz",
         "build:ts": "tsc -p tsconfig.build.json",
-        "commit-log": "conventional-changelog -p angular -i CHANGELOG.md -s",
+        "commit-log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
         "lint": "npm run lint:js && npm run lint:css",
         "lint:js": "mor-eslint . --ext .js,.ts,.vue,.jsx,.tsx --fix",
         "lint:css": "mor-stylelint . --syntax less --fix --ignore-path ./.stylelintignore | mor-stylelint . --custom-syntax postcss-html --fix"
+    },
+    "standard-version": {
+        "skip": {
+            "tag": true
+        }
     },
     "eslintConfig": {
         "extends": [
@@ -109,7 +114,7 @@
     },
     "config": {
         "commitizen": {
-          "path": "cz-conventional-changelog"
+            "path": "cz-conventional-changelog"
         }
     },
     "jest": {
