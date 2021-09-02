@@ -8231,9 +8231,9 @@ moment@^2.24.0, moment@^2.25.3:
   integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
 
 mor-color@^1.0.0:
-  version "1.0.0"
-  resolved "http://betanpm.followme-internal.com/mor-color/-/mor-color-1.0.0.tgz#20398820b5d4e03000704a7d1641a182c12b27cf"
-  integrity sha512-FPkEVNM5ojDt8SKNI5qgNZejoJo52HC2TLSxGKH7+INkTKT/4wvKmDsFHKdZR5ZAR0JNy1oSJabOY+7Aj+2MHQ==
+  version "1.0.1"
+  resolved "http://betanpm.followme-internal.com/mor-color/-/mor-color-1.0.1.tgz#24ae24cd4b059b4e01012e3ba6ad41230766137b"
+  integrity sha512-0Zb3e1ZUPcNoW9J4O63Mkk5HWua1keSEUq8lCH/ETaJQ/kidD7QQ56XrlAekTixUEPzjShKdchH42ffUe1bQxQ==
 
 mor-lint@^1.0.3:
   version "1.0.8"
