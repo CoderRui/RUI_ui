@@ -1,6 +1,6 @@
 {
     "name": "mor-ui",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Mor-ui 组件包",
     "dependencies": {
         "@babel/core": "7.12.3",
@@ -83,6 +83,9 @@
         "build": "node scripts/build.js",
         "test": "node scripts/test.js",
         "commit": "git-cz",
+        "release:major": "standard-version -r major -n",
+        "release:minor": "standard-version -r minor -n",
+        "release:patch": "standard-version -r patch -n",
         "build:ts": "tsc -p tsconfig.build.json",
         "commit-log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
         "lint": "npm run lint:js && npm run lint:css",
