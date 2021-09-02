@@ -1,6 +1,6 @@
 {
     "name": "mor-ui",
-    "version": "2.1.0",
+    "version": "0.1.1",
     "description": "Mor-ui 组件包",
     "dependencies": {
         "@babel/core": "7.12.3",
