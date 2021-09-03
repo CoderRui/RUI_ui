@@ -3,8 +3,8 @@
     "version": "0.1.8",
     "description": "Mor-ui 基于Antd组件包",
     "dependencies": {
-        "mor-color": "^1.0.0",
-        "antd": "^4.16.13"
+        "antd": "^4.16.13",
+        "mor-color": "^1.0.0"
     },
     "devDependencies": {
         "@babel/core": "7.12.3",
@@ -93,7 +93,7 @@
         "start": "node scripts/start.js",
         "build": "node scripts/build.js",
         "test": "node scripts/test.js",
-        "commit": "git-cz && yarn run release:patch",
+        "commit": "git-cz && yarn run release:patch && git push && yarn run publish:npm",
         "release:major": "standard-version -r major -n",
         "release:minor": "standard-version -r minor -n",
         "release:patch": "standard-version -r patch -n",
@@ -102,7 +102,8 @@
         "commit-log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
         "lint": "npm run lint:js && npm run lint:css",
         "lint:js": "mor-eslint . --ext .js,.ts,.vue,.jsx,.tsx --fix",
-        "lint:css": "mor-stylelint . --syntax less --fix --ignore-path ./.stylelintignore | mor-stylelint . --custom-syntax postcss-html --fix"
+        "lint:css": "mor-stylelint . --syntax less --fix --ignore-path ./.stylelintignore | mor-stylelint . --custom-syntax postcss-html --fix",
+        "publish:npm": "npm publish --registry https://registry.npmjs.org/"
     },
     "standard-version": {
         "skip": {
