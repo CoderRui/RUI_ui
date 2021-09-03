@@ -1,6 +1,6 @@
 {
     "name": "mor-ui",
-    "version": "0.1.10",
+    "version": "0.1.11",
     "description": "Mor-ui 基于Antd组件包",
     "dependencies": {
         "antd": "^4.16.13",
