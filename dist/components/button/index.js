@@ -1,3 +1,3 @@
 import Button from 'antd/lib/button';
-import 'antd/lib/button/style/css';
+import 'antd/lib/button/style';
 export default Button;

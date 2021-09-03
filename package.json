@@ -85,7 +85,8 @@
         "react-dom": ">=16.8.0"
     },
     "files": [
-        "dist"
+        "dist",
+        "style"
     ],
     "main": "dist/index",
     "scripts": {
@@ -97,7 +98,7 @@
         "release:minor": "standard-version -r minor -n",
         "release:patch": "standard-version -r patch -n",
         "build:ts": "rm -rf ./dist && tsc -p tsconfig.build.json",
-        "build:less": "npx lessc ./src/index.less ./lib/index.css",
+        "build:less": "npx lessc ./src/styles/index.less ./dist/index.css",
         "commit-log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
         "lint": "npm run lint:js && npm run lint:css",
         "lint:js": "mor-eslint . --ext .js,.ts,.vue,.jsx,.tsx --fix",
