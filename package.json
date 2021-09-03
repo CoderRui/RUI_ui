@@ -82,7 +82,7 @@
         "start": "node scripts/start.js",
         "build": "node scripts/build.js",
         "test": "node scripts/test.js",
-        "commit": "git add . && git-cz && yarn run release:patch",
+        "commit": "git-cz && yarn run release:patch",
         "release:major": "standard-version -r major -n",
         "release:minor": "standard-version -r minor -n",
         "release:patch": "standard-version -r patch -n",
