@@ -86,7 +86,7 @@
         "release:major": "standard-version -r major -n",
         "release:minor": "standard-version -r minor -n",
         "release:patch": "standard-version -r patch -n",
-        "build:ts": "tsc -p tsconfig.build.json",
+        "build:ts": "rm -rf ./dist && tsc -p tsconfig.build.json",
         "commit-log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
         "lint": "npm run lint:js && npm run lint:css",
         "lint:js": "mor-eslint . --ext .js,.ts,.vue,.jsx,.tsx --fix",
